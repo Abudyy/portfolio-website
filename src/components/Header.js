@@ -9,8 +9,14 @@ const Header = () => {
 
   const { colorMode } = useColorMode();
 
-  const linkedInIcon = colorMode === 'light' ? '/images/linked in LIGHT MODE-removebg-preview.png' : '/images/linkedIN_LOGO_WHITE-removebg-preview.png';
-  const sourceIcon = colorMode === 'light' ? '/images/github-LIGHTMODE-removebg-preview.png' : '/images/github-remove-bg-DARKpng-removebg-preview.png';
+  // Fneed to use the process.env path for github pages, or else it wont show </3
+  const linkedInIcon = colorMode === 'light'
+    ? `${process.env.PUBLIC_URL}/images/linked-in-LIGHT-MODE-removebg-preview.png`
+    : `${process.env.PUBLIC_URL}/images/linkedIN_LOGO_WHITE-removebg-preview.png`;
+
+  const githubIcon = colorMode === 'light'
+    ? `${process.env.PUBLIC_URL}/images/github-LIGHTMODE-removebg-preview.png`
+    : `${process.env.PUBLIC_URL}/images/github-remove-bg-DARKpng-removebg-preview.png`;
 
   return (
     <Flex
@@ -24,25 +30,20 @@ const Header = () => {
       position="fixed"
       top="0"
       zIndex="1000"
-      backdropFilter="blur(2.5px)"
+      backdropFilter="blur(3px)"
     >
-      <Flex alignItems="center" justifyContent="center" width="100%" maxWidth="1200px" flexWrap="wrap">
-        <HStack spacing={[2, 4, 6]} alignItems="center" wrap="wrap">
-          {/* Wrap Abdullah Paracha as root page so that it goes when clicked */}
-          <Link as={RouterLink} to="/" mx={[1, 2, 3]}>
-            <Text fontWeight="bold" mx={[1, 2, 3]} fontSize="xl">
-              Abdullah Paracha
-            </Text>
-          </Link>
-          <Link as={RouterLink} to="/resume" mx={[1, 2, 3]}>Resume</Link>
-          <Link as={RouterLink} to="/portfolio" mx={[1, 2, 3]}>Portfolio</Link>
-          <Link href="https://www.linkedin.com/in/abdullah-paracha-9a5763277/" mx={[1, 2, 3]} display="flex" alignItems="center">
+      <Flex alignItems="center" justifyContent="space-between" width="100%" maxWidth="1200px" flexWrap="wrap">
+        <HStack spacing={2} alignItems="center">
+          <Text fontWeight="bold" mx={3} fontSize="xl">Abdullah Paracha</Text>
+          <Link as={RouterLink} to="/resume" mx={6}>Resume</Link>
+          <Link as={RouterLink} to="/portfolio" mx={6}>Portfolio</Link>
+          <Link href="https://www.linkedin.com/in/abdullah-paracha-9a5763277/" mx={2} display="flex" alignItems="center" isExternal>
             <Image src={linkedInIcon} alt="LinkedIn Icon" boxSize="27px" mr={1} />
             LinkedIn
           </Link>
-          <Link href="https://github.com/Abudyy" mx={[1, 2, 3]} display="flex" alignItems="center">
-            <Image src={sourceIcon} alt="Source Icon" boxSize="27px" mr={1} />
-            Github
+          <Link href="https://github.com/Abudyy" mx={2} display="flex" alignItems="center" isExternal>
+            <Image src={githubIcon} alt="GitHub Icon" boxSize="27px" mr={1} />
+            GitHub
           </Link>
           <ColorModeSwitcher />
         </HStack>

@@ -28,7 +28,7 @@ const ThreeScene = () => {
 
     // Load GLTF model from the website we used
     const loader = new GLTFLoader();
-    loader.load('/models/vaporwave_littlest_tokyo_-_3d_editor_challenge/scene.gltf', (gltf) => {
+    loader.load(`${process.env.PUBLIC_URL}/models/vaporwave_littlest_tokyo_-_3d_editor_challenge/scene.gltf`, (gltf) => {
       const model = gltf.scene;
       scene.add(model);
 

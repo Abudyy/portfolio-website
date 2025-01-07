@@ -5,26 +5,26 @@ const projects = [
   {
     title: 'Book Recommendation Site',
     description: 'A machine learning-based book recommender system with Flask deployment.',
-    image: '/images/book-recommender front page.jpeg',
+    image: `${process.env.PUBLIC_URL}/images/book-recommender front page.jpeg`,
     link: 'https://github.com/Abudyy/book-recommendation-system',
   },
   {
     title: 'Organ Classification using ML',
     description: 'Classified medical images from the OrganAMNIST dataset. The models include (MLPs) and (CNNs), trained to predict organ types based on grayscale images.',
-    image: '/images/organs_grayscale.png',
-    link: 'https://github.com/yourusername/worm-game',
+    image: `${process.env.PUBLIC_URL}/images/organs_grayscale.png`,
+    link: 'https://github.com/Abudyy/worm-game',
   },
   {
     title: 'Portfolio Website',
     description: 'The personal portfolio website you are currently viewing.',
-    image: '/images/personal_website_front.jpeg',
-    link: 'https://github.com/yourusername/portfolio-website',
+    image: `${process.env.PUBLIC_URL}/images/personal_website_front.jpeg`,
+    link: 'https://github.com/Abudyy/portfolio-website',
   },
   {
     title: 'EDA and Regressions',
     description: 'Performed EDA on Infrared thermography temperatures dataset and CBC diabetes indicators dataset. Applied linear and logistic regression from scratch and performed various testing',
-    image: '/images/heat and regression expanded.jpeg',
-    link: 'https://github.com/yourusername/portfolio-website',
+    image: `${process.env.PUBLIC_URL}/images/heat and regression expanded.jpeg`,
+    link: 'https://github.com/Abudyy/portfolio-website',
   },
 ];
 
