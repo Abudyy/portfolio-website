@@ -12,7 +12,7 @@ const projects = [
     title: 'Organ Classification using ML',
     description: 'Classified medical images from the OrganAMNIST dataset. The models include (MLPs) and (CNNs), trained to predict organ types based on grayscale images.',
     image: `${process.env.PUBLIC_URL}/images/organs_grayscale.png`,
-    link: 'https://github.com/Abudyy/worm-game',
+    link: 'https://github.com/Abudyy/CNN-MLP-organ-classification',
   },
   {
     title: 'Portfolio Website',
@@ -24,7 +24,7 @@ const projects = [
     title: 'EDA and Regressions',
     description: 'Performed EDA on Infrared thermography temperatures dataset and CBC diabetes indicators dataset. Applied linear and logistic regression from scratch and performed various testing',
     image: `${process.env.PUBLIC_URL}/images/heat and regression expanded.jpeg`,
-    link: 'https://github.com/Abudyy/portfolio-website',
+    link: 'https://github.com/Abudyy/EDA-and-Regressions',
   },
 ];
 
