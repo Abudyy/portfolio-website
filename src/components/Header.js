@@ -41,6 +41,7 @@ const Header = () => {
           </Link>
           <Link as={RouterLink} to="/resume" mx={[1, 2, 3]}>Resume</Link>
           <Link as={RouterLink} to="/portfolio" mx={[1, 2, 3]}>Portfolio</Link>
+          <Link as={RouterLink} to="/resume" mx={[1, 2, 3]}>Resume</Link>
           <Link href="https://www.linkedin.com/in/abdullah-paracha-9a5763277/" mx={[1, 2, 3]} display="flex" alignItems="center" isExternal>
             <Image src={linkedInIcon} alt="LinkedIn Icon" boxSize="27px" mr={1} />
             LinkedIn

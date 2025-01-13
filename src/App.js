@@ -6,6 +6,7 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
+import Resume from './components/Resume'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<MainContent />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/resume" element={<Resume />} /> 
             </Routes>
           </Flex>
           <Footer />
