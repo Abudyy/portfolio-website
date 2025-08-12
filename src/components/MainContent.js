@@ -25,6 +25,7 @@ const MainContent = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          
         >
           <ThreeScene />
           <MotionBox
@@ -35,6 +36,7 @@ const MainContent = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
+            
           >
             <MotionText fontSize="2xl" fontWeight="bold">
               Abdullah Paracha

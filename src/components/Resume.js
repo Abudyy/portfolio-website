@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
+import { Viewer, Worker } from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const Resume = () => {
   return (
@@ -7,11 +9,11 @@ const Resume = () => {
       <Text fontSize="2xl" fontWeight="bold" mb={4}>
         My Resume
       </Text>
-      <iframe
-        src="/Abdullah_Resume_2025_comp_b.pdf"
-        title="Resume"
-        style={{ width: '100%', height: '90vh', border: 'none' }}
-      />
+        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.10.111/build/pdf.worker.min.js">
+        <Box height="90vh" overflow="auto">
+          <Viewer fileUrl={`${process.env.PUBLIC_URL}/Abdullah_Resume_2025_comp_b_new.pdf`} />
+        </Box>
+      </Worker>
     </Box>
   );
 };
